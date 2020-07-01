@@ -1,0 +1,11 @@
+server:
+  port: 11008
+  servlet:
+    context-path: /persistence-consumer
+
+spring:
+  profiles:
+    active: dev
+
+logging:
+  config: classpath:log4j2.xml

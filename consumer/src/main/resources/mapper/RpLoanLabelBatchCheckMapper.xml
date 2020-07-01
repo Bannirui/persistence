@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rxy.persistence.consumer.dal.dao.RpLoanLabelBatchCheckMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.rxy.persistence.consumer.dal.entity.RpLoanLabelBatchCheck">
+        <id column="id" property="id" />
+        <result column="is_delete" property="isDelete" />
+        <result column="bank_name" property="bankName" />
+        <result column="label" property="label" />
+        <result column="long_msg" property="longMsg" />
+        <result column="sync" property="sync" />
+        <result column="bank" property="bank" />
+        <result column="create_time" property="createTime" />
+        <result column="enable" property="enable" />
+        <result column="sms" property="sms" />
+        <result column="alias" property="alias" />
+        <result column="verify" property="verify" />
+        <result column="channel_name" property="channelName" />
+        <result column="label_name" property="labelName" />
+        <result column="channel_id" property="channelId" />
+    </resultMap>
+
+    <insert id="saveWithoutId" parameterType="com.rxy.persistence.consumer.dal.entity.RpLoanLabelBatchCheck">
+        insert into rp_loan_label_batch_check
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="isDelete != null and isDelete != ''">
+                is_delete,
+            </if>
+            <if test="bankName != null and bankName != ''">
+                bank_name,
+            </if>
+            <if test="label != null and label != ''">
+                label,
+            </if>
+            <if test="longMsg != null and longMsg != ''">
+                long_msg,
+            </if>
+            <if test="sync != null and sync != ''">
+                sync,
+            </if>
+            <if test="bank != null and bank != ''">
+                bank,
+            </if>
+            <if test="createTime != null and createTime != ''">
+                create_time,
+            </if>
+            <if test="enable != null and enable != ''">
+                enable,
+            </if>
+            <if test="sms != null and sms != ''">
+                sms,
+            </if>
+            <if test="alias != null and alias != ''">
+                alias,
+            </if>
+            <if test="verify != null and verify != ''">
+                verify,
+            </if>
+            <if test="channelName != null and channelName != ''">
+                channel_name,
+            </if>
+            <if test="labelName != null and labelName != ''">
+                label_name,
+            </if>
+            <if test="channelId != null and channelId != ''">
+                channel_id,
+            </if>
+        </trim>
+        <trim prefix=" values (" suffix=")" suffixOverrides=",">
+            <if test="isDelete != null and isDelete != ''">
+                #{isDelete},
+            </if>
+            <if test="bankName != null and bankName != ''">
+                #{bankName},
+            </if>
+            <if test="label != null and label != ''">
+                #{label},
+            </if>
+            <if test="longMsg != null and longMsg != ''">
+                #{longMsg},
+            </if>
+            <if test="sync != null and sync != ''">
+                #{sync},
+            </if>
+            <if test="bank != null and bank != ''">
+                #{bank},
+            </if>
+            <if test="createTime != null and createTime != ''">
+                #{createTime},
+            </if>
+            <if test="enable != null and enable != ''">
+                #{enable},
+            </if>
+            <if test="sms != null and sms != ''">
+                #{sms},
+            </if>
+            <if test="alias != null and alias != ''">
+                #{alias},
+            </if>
+            <if test="verify != null and verify != ''">
+                #{verify},
+            </if>
+            <if test="channelName != null and channelName != ''">
+                #{channelName},
+            </if>
+            <if test="labelName != null and labelName != ''">
+                #{labelName},
+            </if>
+            <if test="channelId != null and channelId != ''">
+                #{channelId},
+            </if>
+        </trim>
+    </insert>
+
+</mapper>
