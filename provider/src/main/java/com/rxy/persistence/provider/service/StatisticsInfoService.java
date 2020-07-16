@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * </p>
  *
  * @author dingrui
- * @since 2020-06-30
+ * @since 2020-07-01
  */
 public interface StatisticsInfoService extends IService<StatisticsInfo> {
 

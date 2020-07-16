@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rxy.persistence.consumer.scrapy.api.dal.dao.RpLoanStatisticsDayMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.rxy.persistence.consumer.scrapy.api.dal.entity.RpLoanStatisticsDay">
+        <id column="id" property="id"/>
+        <result column="date" property="date"/>
+        <result column="uv" property="uv"/>
+        <result column="test" property="test"/>
+        <result column="ip_real_succ_rate" property="ipRealSuccRate"/>
+        <result column="sub_success" property="subSuccess"/>
+        <result column="pv" property="pv"/>
+        <result column="ip" property="ip"/>
+        <result column="unknown_send_rate" property="unknownSendRate"/>
+        <result column="fail_send_rate" property="failSendRate"/>
+        <result column="label" property="label" />
+        <result column="operator" property="operator" />
+        <result column="bank" property="bank" />
+        <result column="send_fail" property="sendFail" />
+        <result column="create_time" property="createTime"/>
+        <result column="send_unknow" property="sendUnknow"/>
+        <result column="sms" property="sms"/>
+        <result column="send_success" property="sendSuccess"/>
+        <result column="send" property="send"/>
+        <result column="ip_succ_rate" property="ipSuccRate"/>
+        <result column="channel_id" property="channelId"/>
+        <result column="hand" property="hand"/>
+    </resultMap>
+
+    <!--主键自增 忽略字段id-->
+    <insert id="saveWithoutId" parameterType="com.rxy.persistence.consumer.scrapy.api.dal.entity.RpLoanStatisticsDay">
+        insert into rp_loan_statistics_day
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="date != null and date != ''">
+                date,
+            </if>
+            <if test="uv != null and uv != ''">
+                uv,
+            </if>
+            <if test="test != null and test != ''">
+                test,
+            </if>
+            <if test="ipRealSuccRate != null and ipRealSuccRate != ''">
+                ip_real_succ_rate,
+            </if>
+            <if test="subSuccess != null and subSuccess != ''">
+                sub_success,
+            </if>
+            <if test="pv != null and pv != ''">
+                pv,
+            </if>
+            <if test="ip != null and ip != ''">
+                ip,
+            </if>
+            <if test="unknownSendRate != null and unknownSendRate != ''">
+                unknown_send_rate,
+            </if>
+            <if test="failSendRate != null and failSendRate != ''">
+                fail_send_rate,
+            </if>
+            <if test="label != null and label != ''">
+                label,
+            </if>
+            <if test="operator != null and operator != ''">
+                operator,
+            </if>
+            <if test="bank != null and bank != ''">
+                bank,
+            </if>
+            <if test="sendFail != null and sendFail != ''">
+                send_fail,
+            </if>
+            <if test="createTime != null and createTime != ''">
+                create_time,
+            </if>
+            <if test="sendUnknow != null and sendUnknow != ''">
+                send_unknow,
+            </if>
+            <if test="sms != null and sms != ''">
+                sms,
+            </if>
+            <if test="sendSuccess != null and sendSuccess != ''">
+                send_success,
+            </if>
+            <if test="send != null and send != ''">
+                send,
+            </if>
+            <if test="ipSuccRate != null and ipSuccRate != ''">
+                ip_succ_rate,
+            </if>
+            <if test="channelId != null and channelId != ''">
+                channel_id,
+            </if>
+            <if test="hand != null and hand != ''">
+                hand,
+            </if>
+        </trim>
+        <trim prefix=" values (" suffix=")" suffixOverrides=",">
+            <if test="date != null and date != ''">
+                #{date},
+            </if>
+            <if test="uv != null and uv != ''">
+                #{uv},
+            </if>
+            <if test="test != null and test != ''">
+                #{test},
+            </if>
+            <if test="ipRealSuccRate != null and ipRealSuccRate != ''">
+                #{ipRealSuccRate},
+            </if>
+            <if test="subSuccess != null and subSuccess != ''">
+                #{subSuccess},
+            </if>
+            <if test="pv != null and pv != ''">
+                #{pv},
+            </if>
+            <if test="ip != null and ip != ''">
+                #{ip},
+            </if>
+            <if test="unknownSendRate != null and unknownSendRate != ''">
+                #{unknownSendRate},
+            </if>
+            <if test="failSendRate != null and failSendRate != ''">
+                #{failSendRate},
+            </if>
+            <if test="label != null and label != ''">
+                #{label},
+            </if>
+            <if test="operator != null and operator != ''">
+                #{operator},
+            </if>
+            <if test="bank != null and bank != ''">
+                #{bank},
+            </if>
+            <if test="sendFail != null and sendFail != ''">
+                #{sendFail},
+            </if>
+            <if test="createTime != null and createTime != ''">
+                #{createTime},
+            </if>
+            <if test="sendUnknow != null and sendUnknow != ''">
+                #{sendUnknow},
+            </if>
+            <if test="sms != null and sms != ''">
+                #{sms},
+            </if>
+            <if test="sendSuccess != null and sendSuccess != ''">
+                #{sendSuccess},
+            </if>
+            <if test="send != null and send != ''">
+                #{send},
+            </if>
+            <if test="ipSuccRate != null and ipSuccRate != ''">
+                #{ipSuccRate},
+            </if>
+            <if test="channelId != null and channelId != ''">
+                #{channelId},
+            </if>
+            <if test="hand != null and hand != ''">
+                #{hand},
+            </if>
+        </trim>
+    </insert>
+
+</mapper>

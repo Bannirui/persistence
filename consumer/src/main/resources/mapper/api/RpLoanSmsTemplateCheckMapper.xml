@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rxy.persistence.consumer.scrapy.api.dal.dao.RpLoanSmsTemplateCheckMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.rxy.persistence.consumer.scrapy.api.dal.entity.RpLoanSmsTemplateCheck">
+        <id column="id" property="id"/>
+        <result column="template" property="template"/>
+        <result column="bank" property="bank"/>
+        <result column="modify_time" property="modifyTime"/>
+        <result column="ext_no" property="extNo"/>
+        <result column="create_time" property="createTime"/>
+        <result column="enable" property="enable"/>
+        <result column="verify" property="verify"/>
+        <result column="bank_name" property="bankName"/>
+        <result column="sync" property="sync"/>
+        <result column="channel_id" property="channelId"/>
+        <result column="operator" property="operator"/>
+    </resultMap>
+
+    <!--主键自增 忽略字段id-->
+    <insert id="saveWithoutId"
+            parameterType="com.rxy.persistence.consumer.scrapy.api.dal.entity.RpLoanSmsTemplateCheck">
+        insert into rp_loan_sms_template_check
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="template != null and template != ''">
+                template,
+            </if>
+            <if test="bank != null and bank != ''">
+                bank,
+            </if>
+            <if test="modifyTime != null and modifyTime != ''">
+                modify_time,
+            </if>
+            <if test="extNo != null and extNo != ''">
+                ext_no,
+            </if>
+            <if test="createTime != null and createTime != ''">
+                create_time,
+            </if>
+            <if test="enable != null and enable != ''">
+                enable,
+            </if>
+            <if test="verify != null and verify != ''">
+                verify,
+            </if>
+            <if test="bankName != null and bankName != ''">
+                bank_name,
+            </if>
+            <if test="sync != null and sync != ''">
+                sync,
+            </if>
+            <if test="channelId != null and channelId != ''">
+                channel_id,
+            </if>
+            <if test="operator != null and operator != ''">
+                operator,
+            </if>
+        </trim>
+        <trim prefix=" values (" suffix=")" suffixOverrides=",">
+            <if test="template != null and template != ''">
+                #{template},
+            </if>
+            <if test="bank != null and bank != ''">
+                #{bank},
+            </if>
+            <if test="modifyTime != null and modifyTime != ''">
+                #{modifyTime},
+            </if>
+            <if test="extNo != null and extNo != ''">
+                #{extNo},
+            </if>
+            <if test="createTime != null and createTime != ''">
+                #{createTime},
+            </if>
+            <if test="enable != null and enable != ''">
+                #{enable},
+            </if>
+            <if test="verify != null and verify != ''">
+                #{verify},
+            </if>
+            <if test="bankName != null and bankName != ''">
+                #{bankName},
+            </if>
+            <if test="sync != null and sync != ''">
+                #{sync},
+            </if>
+            <if test="channelId != null and channelId != ''">
+                #{channelId},
+            </if>
+            <if test="operator != null and operator != ''">
+                #{operator},
+            </if>
+        </trim>
+    </insert>
+    <delete id="deleteByTime">
+        delete from rp_loan_sms_template_check
+        where (create_time &gt;= #{startTime} and create_time &lt;= #{endTime}) or (modify_time &gt;= #{startTime} and modify_time &lt;= #{endTime})
+    </delete>
+
+</mapper>

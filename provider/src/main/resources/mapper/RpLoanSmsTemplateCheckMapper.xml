@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rxy.persistence.provider.dal.dao.RpLoanSmsTemplateCheckMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.rxy.persistence.provider.dal.entity.RpLoanSmsTemplateCheck">
+        <id column="id" property="id" />
+        <result column="template" property="template" />
+        <result column="bank" property="bank" />
+        <result column="modify_time" property="modifyTime" />
+        <result column="ext_no" property="extNo" />
+        <result column="create_time" property="createTime" />
+        <result column="enable" property="enable" />
+        <result column="verify" property="verify" />
+        <result column="bank_name" property="bankName" />
+        <result column="sync" property="sync" />
+        <result column="channel_id" property="channelId" />
+        <result column="operator" property="operator" />
+    </resultMap>
+
+</mapper>

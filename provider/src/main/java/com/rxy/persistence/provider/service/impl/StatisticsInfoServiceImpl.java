@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author dingrui
- * @since 2020-06-30
+ * @since 2020-07-01
  */
 @Service
 public class StatisticsInfoServiceImpl extends ServiceImpl<StatisticsInfoMapper, StatisticsInfo> implements StatisticsInfoService {

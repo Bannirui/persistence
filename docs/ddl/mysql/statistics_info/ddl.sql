@@ -3,7 +3,7 @@
 -- --------------------------
 CREATE TABLE `statistics_info` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `send_date` varchar(32) NOT NULL DEFAULT '',
+  `send_date` date NOT NULL,
   `product` varchar(32) NOT NULL DEFAULT '',
   `label` varchar(32) NOT NULL DEFAULT '',
   `operator` int(10) NOT NULL DEFAULT 0,
@@ -19,7 +19,7 @@ CREATE TABLE `statistics_info` (
   `pv` int(10) NOT NULL DEFAULT 0,
   `uv` int(10) NOT NULL DEFAULT 0,
   `ip` int(10) NOT NULL DEFAULT 0,
-  `create_time` varchar(32) NOT NULL DEFAULT '',
-  `update_time` varchar(32) NOT NULL DEFAULT '',
+  `create_time` date NOT NULL,
+  `update_time` date NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

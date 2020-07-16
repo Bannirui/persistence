@@ -10,7 +10,7 @@ import java.io.Serializable;
  * </p>
  *
  * @author dingrui
- * @since 2020-06-30
+ * @since 2020-07-01
  */
 public class StatisticsInfo implements Serializable {
 
@@ -25,7 +25,7 @@ public class StatisticsInfo implements Serializable {
 
     private String label;
 
-    private Integer operator;
+    private String operator;
 
     private String channelName;
 
@@ -37,19 +37,19 @@ public class StatisticsInfo implements Serializable {
 
     private String smsContent;
 
-    private Integer sendNum;
+    private String sendNum;
 
-    private Integer sendSuccess;
+    private String sendSuccess;
 
-    private Integer sendFail;
+    private String sendFail;
 
-    private Integer sendUnknown;
+    private String sendUnknown;
 
-    private Integer pv;
+    private String pv;
 
-    private Integer uv;
+    private String uv;
 
-    private Integer ip;
+    private String ip;
 
     private String createTime;
 
@@ -88,11 +88,11 @@ public class StatisticsInfo implements Serializable {
         this.label = label;
     }
 
-    public Integer getOperator() {
+    public String getOperator() {
         return operator;
     }
 
-    public void setOperator(Integer operator) {
+    public void setOperator(String operator) {
         this.operator = operator;
     }
 
@@ -136,59 +136,59 @@ public class StatisticsInfo implements Serializable {
         this.smsContent = smsContent;
     }
 
-    public Integer getSendNum() {
+    public String getSendNum() {
         return sendNum;
     }
 
-    public void setSendNum(Integer sendNum) {
+    public void setSendNum(String sendNum) {
         this.sendNum = sendNum;
     }
 
-    public Integer getSendSuccess() {
+    public String getSendSuccess() {
         return sendSuccess;
     }
 
-    public void setSendSuccess(Integer sendSuccess) {
+    public void setSendSuccess(String sendSuccess) {
         this.sendSuccess = sendSuccess;
     }
 
-    public Integer getSendFail() {
+    public String getSendFail() {
         return sendFail;
     }
 
-    public void setSendFail(Integer sendFail) {
+    public void setSendFail(String sendFail) {
         this.sendFail = sendFail;
     }
 
-    public Integer getSendUnknown() {
+    public String getSendUnknown() {
         return sendUnknown;
     }
 
-    public void setSendUnknown(Integer sendUnknown) {
+    public void setSendUnknown(String sendUnknown) {
         this.sendUnknown = sendUnknown;
     }
 
-    public Integer getPv() {
+    public String getPv() {
         return pv;
     }
 
-    public void setPv(Integer pv) {
+    public void setPv(String pv) {
         this.pv = pv;
     }
 
-    public Integer getUv() {
+    public String getUv() {
         return uv;
     }
 
-    public void setUv(Integer uv) {
+    public void setUv(String uv) {
         this.uv = uv;
     }
 
-    public Integer getIp() {
+    public String getIp() {
         return ip;
     }
 
-    public void setIp(Integer ip) {
+    public void setIp(String ip) {
         this.ip = ip;
     }
 

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rxy.persistence.consumer.scrapy.api.dal.dao.RpLoanLabelCheckMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="RpLoanLabelCheckMap" type="com.rxy.persistence.consumer.scrapy.api.dal.entity.RpLoanLabelCheck">
+        <id column="id" property="id"/>
+        <result column="bank_name" property="bankName"/>
+        <result column="label" property="label"/>
+        <result column="long_msg" property="longMsg"/>
+        <result column="sync" property="sync"/>
+        <result column="url" property="url"/>
+        <result column="url_key" property="urlKey"/>
+        <result column="bank" property="bank"/>
+        <result column="modify_time" property="modifyTime"/>
+        <result column="create_time" property="createTime"/>
+        <result column="enable" property="enable"/>
+        <result column="individuation" property="individuation"/>
+        <result column="name" property="name"/>
+        <result column="alias" property="alias"/>
+        <result column="verify" property="verify"/>
+    </resultMap>
+
+    <!--主键自增 忽略字段id-->
+    <insert id="saveWithoutId" parameterType="com.rxy.persistence.consumer.scrapy.api.dal.entity.RpLoanLabelCheck">
+        insert into rp_loan_label_check
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="bankName != null and bankName != ''">
+                bank_name,
+            </if>
+            <if test="label != null and label != ''">
+                label,
+            </if>
+            <if test="longMsg != null and longMsg != ''">
+                long_msg,
+            </if>
+            <if test="sync != null and sync != ''">
+                sync,
+            </if>
+            <if test="url != null and url != ''">
+                url,
+            </if>
+            <if test="urlKey != null and urlKey != ''">
+                url_key,
+            </if>
+            <if test="bank != null and bank != ''">
+                bank,
+            </if>
+            <if test="modifyTime != null and modifyTime != ''">
+                modify_time,
+            </if>
+            <if test="createTime != null and createTime != ''">
+                create_time,
+            </if>
+            <if test="enable != null and enable != ''">
+                enable,
+            </if>
+            <if test="individuation != null and individuation != ''">
+                individuation,
+            </if>
+            <if test="name != null and name != ''">
+                name,
+            </if>
+            <if test="alias != null and alias != ''">
+                alias,
+            </if>
+            <if test="verify != null and verify != ''">
+                verify,
+            </if>
+        </trim>
+        <trim prefix=" values (" suffix=")" suffixOverrides=",">
+            <if test="bankName != null and bankName != ''">
+                #{bankName},
+            </if>
+            <if test="label != null and label != ''">
+                #{label},
+            </if>
+            <if test="longMsg != null and longMsg != ''">
+                #{longMsg},
+            </if>
+            <if test="sync != null and sync != ''">
+                #{sync},
+            </if>
+            <if test="url != null and url != ''">
+                #{url},
+            </if>
+            <if test="urlKey != null and urlKey != ''">
+                #{urlKey},
+            </if>
+            <if test="bank != null and bank != ''">
+                #{bank},
+            </if>
+            <if test="modifyTime != null and modifyTime != ''">
+                #{modifyTime},
+            </if>
+            <if test="createTime != null and createTime != ''">
+                #{createTime},
+            </if>
+            <if test="enable != null and enable != ''">
+                #{enable},
+            </if>
+            <if test="individuation != null and individuation != ''">
+                #{individuation},
+            </if>
+            <if test="name != null and name != ''">
+                #{name},
+            </if>
+            <if test="alias != null and alias != ''">
+                #{alias},
+            </if>
+            <if test="verify != null and verify != ''">
+                #{verify},
+            </if>
+        </trim>
+    </insert>
+
+    <!--根据日期时间删除-->
+    <delete id="deleteByTime" >
+        delete from rp_loan_label_check
+        where (create_time &gt;= #{startTime} and create_time &lt;= #{endTime}) or (modify_time &gt;= #{startTime} and modify_time &lt;= #{endTime})
+    </delete>
+
+</mapper>

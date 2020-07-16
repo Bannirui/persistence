@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rxy.persistence.consumer.scrapy.statistics.dal.dao.StatisticsInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.rxy.persistence.consumer.scrapy.statistics.dal.entity.StatisticsInfo">
+        <id column="id" property="id" />
+        <result column="send_date" property="sendDate" />
+        <result column="product" property="product" />
+        <result column="label" property="label" />
+        <result column="operator" property="operator" />
+        <result column="channel_name" property="channelName" />
+        <result column="channel_id" property="channelId" />
+        <result column="province" property="province" />
+        <result column="domain" property="domain" />
+        <result column="sms_content" property="smsContent" />
+        <result column="send_num" property="sendNum" />
+        <result column="send_success" property="sendSuccess" />
+        <result column="send_fail" property="sendFail" />
+        <result column="send_unknown" property="sendUnknown" />
+        <result column="pv" property="pv" />
+        <result column="uv" property="uv" />
+        <result column="ip" property="ip" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!--主键自增 忽略字段id-->
+    <insert id="saveWithoutId" parameterType="com.rxy.persistence.consumer.scrapy.statistics.dal.entity.StatisticsInfo">
+        insert into statistics_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="sendDate != null and sendDate != ''">
+                send_date,
+            </if>
+            <if test="product != null and product != ''">
+                product,
+            </if>
+            <if test="label != null and label != ''">
+                label,
+            </if>
+            <if test="operator != null and operator != ''">
+                operator,
+            </if>
+            <if test="channelName != null and channelName != ''">
+                channel_name,
+            </if>
+            <if test="channelId != null and channelId != ''">
+                channel_id,
+            </if>
+            <if test="province != null and province != ''">
+                province,
+            </if>
+            <if test="domain != null and domain != ''">
+                domain,
+            </if>
+            <if test="smsContent != null and smsContent != ''">
+                sms_content,
+            </if>
+            <if test="sendNum != null and sendNum != ''">
+                send_num,
+            </if>
+            <if test="sendSuccess != null and sendSuccess != ''">
+                send_success,
+            </if>
+            <if test="sendFail != null and sendFail != ''">
+                send_fail,
+            </if>
+            <if test="sendUnknown != null and sendUnknown != ''">
+                send_unknown,
+            </if>
+            <if test="pv != null and pv != ''">
+                pv,
+            </if>
+            <if test="uv != null and uv != ''">
+                uv,
+            </if>
+            <if test="ip != null and ip != ''">
+                ip,
+            </if>
+            <if test="createTime != null and createTime != ''">
+                create_time,
+            </if>
+            <if test="updateTime != null and updateTime != ''">
+                update_time,
+            </if>
+        </trim>
+        <trim prefix=" values (" suffix=")" suffixOverrides=",">
+            <if test="sendDate != null and sendDate != ''">
+                #{sendDate},
+            </if>
+            <if test="product != null and product != ''">
+                #{product},
+            </if>
+            <if test="label != null and label != ''">
+                #{label},
+            </if>
+            <if test="operator != null and operator != ''">
+                #{operator},
+            </if>
+            <if test="channelName != null and channelName != ''">
+                #{channelName},
+            </if>
+            <if test="channelId != null and channelId != ''">
+                #{channelId},
+            </if>
+            <if test="province != null and province != ''">
+                #{province},
+            </if>
+            <if test="domain != null and domain != ''">
+                #{domain},
+            </if>
+            <if test="smsContent != null and smsContent != ''">
+                #{smsContent},
+            </if>
+            <if test="sendNum != null and sendNum != ''">
+                #{sendNum},
+            </if>
+            <if test="sendSuccess != null and sendSuccess != ''">
+                #{sendSuccess},
+            </if>
+            <if test="sendFail != null and sendFail != ''">
+                #{sendFail},
+            </if>
+            <if test="sendUnknown != null and sendUnknown != ''">
+                #{sendUnknown},
+            </if>
+            <if test="pv != null and pv != ''">
+                #{pv},
+            </if>
+            <if test="uv != null and uv != ''">
+                #{uv},
+            </if>
+            <if test="ip != null and ip != ''">
+                #{ip},
+            </if>
+            <if test="createTime != null and createTime != ''">
+                #{createTime},
+            </if>
+            <if test="updateTime != null and updateTime != ''">
+                #{updateTime},
+            </if>
+        </trim>
+    </insert>
+
+</mapper>
