@@ -5,7 +5,7 @@ server:
 
 spring:
   profiles:
-    active: dev
+    active: test
 
 logging:
   config: classpath:log4j2.xml
